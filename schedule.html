@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Fitness Tracker Dashboard</title>
+</head>
+
+<body class="bg-[#f9f9f9]">
+    <div class="sidebar-container">
+        <div class="sidebar-toggle lg:hidden" onclick="toggleSidebar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div id="sidebar"
+            class="sidebar  bg-white/100 backdrop-blur-md lg:bg-transparent border-[#f9f9f9] border-r lg:open">
+            <div class="sidebar-logo flex justify-center">
+                <img src="./assest/Frame 812852.svg" alt="Logo">
+            </div>
+            <div class="menu-list space-y-8">
+
+                <div onclick="handleMenuItemClick()"><a href="./index.html" class="menu-item flex gap-3 px-5"><span><i
+                                class="fa-solid fa-th"></i></span>Overview</a></div>
+
+
+                <div onclick="handleMenuItemClick()"><a href="./workout.html" class="menu-item flex gap-3 px-5"><span><i
+                                class="fa-solid fa-dumbbell"></i></span>
+                        Workout</a></div>
+
+
+                <div onclick="handleMenuItemClick()">
+                    <a href="./dietplan.html" class="menu-item flex gap-3 px-5"><span><i class="fa fa-calendar-check-o"
+                                aria-hidden="true"></i></span>Diet Plan</a></div>
+
+                <div onclick="handleMenuItemClick()"> <a href="./schedule.html"
+                        class="menu-item-active text-white py-2 px-5 flex gap-3"><span><i class="fa fa-calendar"
+                                aria-hidden="true"></i></span>My Schedule</a></div>
+                <div onclick="handleMenuItemClick()"><a href="" class="menu-item flex gap-3 px-5"><span><i
+                                class="fa fa-signal" aria-hidden="true"></i></i></span>Progress</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar pr-9 pl-8 bg-white border-b border-[#ccc] flex items-center justify-between  ">
+        <div class="text-xl font-semibold">Welcome Back!</div>
+        <div class="flex items-center space-x-4">
+            <div class="cursor-pointer hover:text-blue-500"><i class="fa-solid fa-bell"></i></div>
+            <div class="cursor-pointer hover:text-blue-500"><i class="fa-solid fa-gear"></i></div>
+            <div class="cursor-pointer hover:text-blue-500"><img src="./assest/Avatar w. photo.svg" alt=""></div>
+        </div>
+    </div>
+
+    <div> <div class="content-container mt-25 mx-auto w-[94%] lg:w-[75%] lg:ml-64">
+        <div class="flex flex-col md:flex-row lg:flex-row justify-between gap-4">
+            <div class="text-content p-6 lg:p-8 w-full lg:w-1/2">
+                <h2 class="text-2xl font-bold mb-4">Track Your Daily Activities</h2>
+                <p class="text-lg mb-2">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod
+                </p>
+            </div>
+            <div class="overlay"></div>
+            <div class="w-full md:w-1/2 lg:w-1/2 flex-shrink-0">
+                <img src="./assest/anastasia-hisel-tpivPdQgC20-unsplash 2.svg" alt="" class="h-full w-full object-cover" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="lg:ml-64 lg:w-[75%] w-[94%] mx-auto" >
+        <strong><h1 class="text-4xl text-center m-5">Schedule Outline</h1></strong>
+        <div class="p-4 bg-white m-5 rounded-3xl shadow">
+            <h1 class="text-2xl mb-2">Monday</h1>
+            <div class=" flex justify-between">
+                <div class="flex gap-3">
+                    <img src="./assest/Image run.svg" alt="">
+                <p class="font-bold">Runing <br><span class="font-light ">At 8:00am</span></p>
+                </div>
+                <p class="font-bold text-orange-400">50 mins</p>
+            </div>
+        </div>
+
+        <div class="p-4 bg-white m-5 rounded-3xl shadow">
+            <h1 class="text-2xl mb-2">Tuesday</h1>
+            <div class=" flex justify-between">
+                <div class="flex gap-3">
+                    <img src="./assest/image 97.svg" alt="">
+                <p class="font-bold">Back Stretch <br><span class="font-light">At 8:00am</span></p>
+                </div>
+                <p class="font-bold text-orange-400">70 mins</p>
+            </div>
+        </div>
+
+        <div class="p-4 bg-white m-5 rounded-3xl shadow">
+            <h1 class="text-2xl mb-2">Wednesday</h1>
+            <div class=" flex justify-between">
+                <div class="flex gap-3">
+                    <img src="./assest/image 97.svg" alt="">
+                <p class="font-bold">pull <br><span class="font-light">At 8:00am</span></p>
+                </div>
+                <p class="font-bold text-orange-400">60 mins</p>
+            </div>
+        </div>
+
+        <div class="p-4 bg-white m-5 rounded-3xl shadow">
+            <h1 class="text-2xl mb-2">Thurday</h1>
+            <div class=" flex justify-between">
+                <div class="flex gap-3">
+                    <img src="./assest/Group 107 1.png" alt="">
+                <p class="font-bold">Leg & Core<br><span class="font-light">At 8:00am</span></p>
+                </div>
+                <p class="font-bold text-orange-400">70 mins</p>
+            </div>
+        </div>
+
+        <div class="p-4 bg-white m-5 rounded-3xl shadow">
+            <h1 class="text-2xl mb-2">Fiday</h1>
+            <div class=" flex justify-between">
+                <div class="flex gap-3">
+                    <img src="./assest/Image run.svg" alt="">
+                <p class="font-bold">Jogging <br><span class="font-light">At 8:00am</span></p>
+                </div>
+                <p class="font-bold text-orange-400">45 mins</p>
+            </div>
+        </div>
+
+    
+
+      
+    </div>
+
+    <script src="./index.js"></script>
+
+
+</body>
+
+</html>
