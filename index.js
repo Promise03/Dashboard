@@ -353,3 +353,17 @@ document.addEventListener('DOMContentLoaded', () => {
     displayStoredFormData(); // Populate the summary cards
     setupForm(); // Initialize form handling if it exists on the page
 });
+
+function toggleGearInfo (){
+    const infopanel = document.getElementById('gearInfoPanel');
+    if (infopanel){
+        if(infopanel.classList.contains('hidden')){
+            infopanel.classList.remove('hidden')
+            infopanel.classList.add('block')
+        }
+        else{
+            infopanel.classList.remove('block')
+            infopanel.classList.add('hidden')
+        }
+    }
+}

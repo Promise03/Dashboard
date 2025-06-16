@@ -51,20 +51,40 @@
     <div class="navbar pr-9 pl-8 bg-white border-b border-[#ccc] flex items-center justify-between  ">
         <div class="text-xl font-semibold">Welcome Back!</div>
         <div class="flex items-center space-x-4">
-            <div class="cursor-pointer hover:text-blue-500"><i class="fa-solid fa-bell"></i></div>
-            <div class="cursor-pointer hover:text-blue-500"><i class="fa-solid fa-gear"></i></div>
+            <div class="cursor-pointer hover:text-blue-500 " id="show"><i class="fa-solid fa-bell"></i></div>
+            <div class="cursor-pointer hover:text-blue-500" onclick="toggleGearInfo()">
+                <i class="fa-solid fa-gear"></i>
+                <div id="gearInfoPanel" class="w-[50%] bg-white p-4 absolute right-px top-[50px] shadow rounded hidden">
+                    <p>Fitness trackers are wearable devices that monitor and track various aspects of your physical activity, health, and wellness. They can track:</p>
+                    <ul class="list-dics">
+                        <li>Steps taken: Daily step count and progress toward goals</li>
+                        <li>Distance traveled: Distance walked, run, or cycled</li>
+                        <li>Calories burned: Estimated energy expenditure</li>
+                        <li>Heart rate: Continuous or periodic heart rate monitoring</li>
+                        <li>Sleep patterns: Sleep quality, duration, and stages</li>
+                        <li>Exercise tracking: Specific workout tracking, such as running, cycling, or strength training</li>
+                    </ul>
+            
+                    <strong>Fitness trackers can help you:</strong>
+                    <ul>
+                        <li>Set and achieve fitness goals</li>
+                        <li>Monitor progress</li>
+                        <li>Stay motivated</li>
+                        <li>Improve overall health and wellness</li>
+                    </ul>
+                </div>
+            </div>
             <div class="cursor-pointer hover:text-blue-500"><img src="./assest/Avatar w. photo.svg" alt=""></div>
         </div>
     </div>
 
+        <p></p>
     <div> <div class="content-container mt-25 mx-auto w-[94%] lg:w-[75%] lg:ml-64">
         <div class="flex flex-col md:flex-row lg:flex-row justify-between gap-4">
             <div class="text-content p-6 lg:p-8 w-full lg:w-1/2">
                 <h2 class="text-2xl font-bold mb-4">Track Your Daily Activities</h2>
                 <p class="text-lg mb-2">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod
+                    Track your progress, not perfection, because small steps add up, every step counts, and consistency is key; monitor, motivate, achieve, by logging it and loving it, tracking, reflecting, and growing, driven by data that fuels progress!
                 </p>
             </div>
             <div class="overlay"></div>
